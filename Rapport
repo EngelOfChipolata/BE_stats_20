@@ -12,3 +12,131 @@
 	note proba: quantitative continue
 	succes: qualitative nominale
 2.3)	
+
+3.1.1) 
+.Table &lt;- table(ienac20$bac)
+&gt; .Table  # counts for bac
+</code></pre>
+
+<pre><code>
+  A   M  PC  SI SVT 
+  0  30   3   4  13 
+</code></pre>
+
+<pre><code class="r">&gt; round(100*.Table/sum(.Table), 2)  # percentages for bac
+</code></pre>
+
+<pre><code>
+  A   M  PC  SI SVT 
+  0  60   6   8  26 
+</code></pre>
+
+<pre><code class="r">&gt; .Table &lt;- table(ienac20$concours)
+&gt; .Table  # counts for concours
+</code></pre>
+
+<pre><code>
+        Civil Fonctionnaire 
+           48             7 
+</code></pre>
+
+<pre><code class="r">&gt; round(100*.Table/sum(.Table), 2)  # percentages for concours
+</code></pre>
+
+<pre><code>
+        Civil Fonctionnaire 
+        87.27         12.73 
+</code></pre>
+
+<pre><code class="r">&gt; .Table &lt;- table(ienac20$filiere)
+&gt; .Table  # counts for filiere
+</code></pre>
+
+<pre><code>
+  CI  CPP   MP  MP*   PC  PC*  PSI PSI* 
+   1    1   21    2    7    5    6    9 
+</code></pre>
+
+<pre><code class="r">&gt; round(100*.Table/sum(.Table), 2)  # percentages for filiere
+</code></pre>
+
+<pre><code>
+   CI   CPP    MP   MP*    PC   PC*   PSI  PSI* 
+ 1.92  1.92 40.38  3.85 13.46  9.62 11.54 17.31 
+</code></pre>
+
+<pre><code class="r">&gt; .Table &lt;- table(ienac20$mention)
+&gt; .Table  # counts for mention
+</code></pre>
+
+<pre><code>
+ P AB  B TB 
+ 0  5 24 21 
+</code></pre>
+
+<pre><code class="r">&gt; round(100*.Table/sum(.Table), 2)  # percentages for mention
+</code></pre>
+
+<pre><code>
+ P AB  B TB 
+ 0 10 48 42 
+</code></pre>
+
+<pre><code class="r">&gt; .Table &lt;- table(ienac20$sexe)
+&gt; .Table  # counts for sexe
+</code></pre>
+
+<pre><code>
+ F  M 
+ 8 47 
+</code></pre>
+
+<pre><code class="r">&gt; round(100*.Table/sum(.Table), 2)  # percentages for sexe
+</code></pre>
+
+<pre><code>
+    F     M 
+14.55 85.45 
+</code></pre>
+
+<pre><code class="r">&gt; .Table &lt;- table(ienac20$succes)
+&gt; .Table  # counts for succes
+</code></pre>
+
+<pre><code>
+ \xe9chec succ\xe8s 
+       16        39 
+</code></pre>
+
+<pre><code class="r">&gt; round(100*.Table/sum(.Table), 2)  # percentages for succes
+</code></pre>
+
+<pre><code>
+ \xe9chec succ\xe8s 
+    29.09     70.91 
+
+
+
+
+
+
+3.1.2)
+> numSummary(ienac20[,c("analyse", "ecrit", "moyenne", "oral", "proba", "rang", "voeux")], 
++   statistics=c("mean", "sd", "IQR", "quantiles"), quantiles=c(0,.25,.5,.75,1))
+
+             mean          sd     IQR    0%      25%     50%       75%
+analyse  14.78182   2.6260159   3.250  7.00  13.5000  15.000   16.7500
+ecrit    11.96380   1.1181105   1.350  9.95  11.3325  11.865   12.6825
+moyenne  12.88340   0.8080099   0.700 11.91  12.3800  12.680   13.0800
+oral     14.34280   1.5271917   2.225 10.99  13.4275  14.125   15.6525
+proba    11.27636   2.9688796   4.250  4.10   9.1500  11.550   13.4000
+rang    788.48000 350.6500226 482.000 48.00 595.2500 788.500 1077.2500
+voeux     3.28000   2.2227029   2.000  1.00   2.0000   3.000    4.0000
+           100%  n NA
+analyse   19.00 55  0
+ecrit     14.69 50  5
+moyenne   15.08 50  5
+oral      17.35 50  5
+proba     17.00 55  0
+rang    1320.00 50  5
+voeux     13.00 50  5
