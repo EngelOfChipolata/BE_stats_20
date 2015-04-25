@@ -6,7 +6,7 @@
 	note oral: quantitative continue
 	moyenne: quantitative continue
 	rang: quantitatif discret
-	voeux: qualitatif discret
+	voeux: quantitatif discret
 	concours: qualitatif nominal
 	note analyse: quantitative continue
 	note proba: quantitative continue
