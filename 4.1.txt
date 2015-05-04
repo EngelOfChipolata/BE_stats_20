@@ -1,0 +1,50 @@
+4.1.1)Hypothèses maintenues (X1,...,Xn) iid OK
+
+with(ienac20, shapiro.test(analyse))
+
+	Shapiro-Wilk normality test
+
+data:  analyse
+W = 0.933, p-value = 0.004373
+
+Pour un risque de 5%, in a alpha > p-value donc on rejette la normalité avec un risque de 5%
+
+with(ienac20, shapiro.test(proba))
+
+	Shapiro-Wilk normality test
+
+data:  proba
+W = 0.9804, p-value = 0.5065
+
+alpha < p-value donc on ne rejette pas la normalité avec un risque bêta non contrôlé.
+
+Si la distribution des notes d'analyses ne ressemble pas à une loi normale, on voit que le test de Shapiro-Wilk est incapable de rejeter la loi normale pour la variable proba.
+
+
+4.1.2)a)
+Remettre en cause la moyenne de proba > 12
+Hyp maintenues (X1,...,Xn) iid, de loi normale par Shapiro-Wilk, variance inconnue
+--> Test paramétrique pour une moyenne (t-test univarié)
+
+H0 : moyenne > 12
+HI : moyenne <= 12
+
+with(ienac20, (t.test(proba, alternative='less', mu=12, 
+  conf.level=.95)))
+
+	One Sample t-test
+
+data:  proba
+t = -1.8076, df = 54, p-value = 0.03812
+alternative hypothesis: true mean is less than 12
+95 percent confidence interval:
+     -Inf 11.94633
+sample estimates:
+mean of x 
+ 11.27636
+
+
+11.27636 < 11.94633 L'estimation est dans la zone de rejet --> Rejet de H0
+p-value < 0.05 donc on rejette H0 avec un risque de 5%, la moyenne de proba est inférieure à 12/20
+
+Le test nous a permis de confirmer à 95% que la moyenne de proba était inférieure à 12 sur toute la promo grâce à cet échantillon seulement.
