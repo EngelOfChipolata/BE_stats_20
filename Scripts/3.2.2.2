@@ -1,0 +1,3 @@
+tapply(ienac20$proba, list(succes=ienac20$succes), sd, na.rm=TRUE)
+scatterplotMatrix(~analyse+ecrit+moyenne+oral+proba+rang+voeux, reg.line=lm, smooth=TRUE, 
+  spread=FALSE, span=0.5, id.n=0, diagonal = 'density', data=ienac20)
