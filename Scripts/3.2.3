@@ -1,0 +1,21 @@
+1.a)
+xtabs(~succes+bac, data=ienac20)
+xtabs(~succes+concours, data=ienac20)
+xtabs(~succes+filiere, data=ienac20)
+xtabs(~succes+mention, data=ienac20)
+xtabs(~succes+sexe, data=ienac20)
+
+1.b)
+colPercents(xtabs(~succes+bac, data=ienac20))
+colPercents(xtabs(~succes+concours, data=ienac20))
+colPercents(xtabs(~succes+filiere, data=ienac20))
+colPercents(xtabs(~succes+mention, data=ienac20))
+colPercents(xtabs(~succes+sexe, data=ienac20))
+
+1.c)
+barplot(xtabs(~succes+bac, data=ienac20), legend.text=T,xlab="bac",ylab="%")
+barplot(xtabs(~succes+concours, data=ienac20), legend.text=T,xlab="concours",ylab="%")
+barplot(xtabs(~succes+filiere, data=ienac20), legend.text=T,xlab="filiere",ylab="%")
+barplot(xtabs(~succes+mention, data=ienac20), legend.text=T,xlab="mention",ylab="%")
+barplot(xtabs(~succes+sexe, data=ienac20), legend.text=T,xlab="sexe",ylab="%")
+
