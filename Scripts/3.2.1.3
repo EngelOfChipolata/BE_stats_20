@@ -1,4 +1,5 @@
 tapply(ienac20$rang, list(filiere=ienac20$filiere), mean, na.rm=TRUE)
 tapply(ienac20$rang, list(filiere=ienac20$filiere), median, na.rm=TRUE)
 tapply(ienac20$rang, list(filiere=ienac20$filiere), sd, na.rm=TRUE)
+Boxplot(rang~filiere, data=ienac20, id.method="y")
 
