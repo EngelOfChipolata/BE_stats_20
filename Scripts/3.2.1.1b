@@ -1,0 +1,15 @@
+with(ienac20, Hist(analyse, scale="frequency", breaks="Sturges", col="darkgray"))
+with(ienac20, Hist(ecrit, scale="frequency", breaks="Sturges", col="darkgray"))
+with(ienac20, Hist(moyenne, scale="frequency", breaks="Sturges", col="darkgray"))
+with(ienac20, Hist(oral, scale="frequency", breaks="Sturges", col="darkgray"))
+with(ienac20, Hist(proba, scale="frequency", breaks="Sturges", col="darkgray"))
+with(ienac20, Hist(rang, scale="frequency", breaks="Sturges", col="darkgray"))
+with(ienac20, Hist(voeux, scale="frequency", breaks="Sturges", col="darkgray"))
+
+Boxplot( ~ analyse, data=ienac20, id.method="y")
+Boxplot( ~ ecrit, data=ienac20, id.method="y")
+Boxplot( ~ moyenne, data=ienac20, id.method="y")
+Boxplot( ~ oral, data=ienac20, id.method="y")
+Boxplot( ~ proba, data=ienac20, id.method="y")
+Boxplot( ~ rang, data=ienac20, id.method="y")
+Boxplot( ~ voeux, data=ienac20, id.method="y"

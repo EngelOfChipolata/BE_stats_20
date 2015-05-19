@@ -1,0 +1,48 @@
+tapply(ienac20$proba, list(succes=ienac20$succes), sd, na.rm=TRUE)
+scatterplotMatrix(~analyse+ecrit+moyenne+oral+proba+rang+voeux, reg.line=lm, smooth=TRUE, 
+  spread=FALSE, span=0.5, id.n=0, diagonal = 'density', data=ienac20)
+
+```{r}
+scatterplotMatrix(~proba+rang+voeux | concours, reg.line=lm, smooth=TRUE, spread=FALSE, span=0.5, 
+  id.n=0, diagonal= 'density', by.groups=FALSE, data=ienac20)
+```
+
+```{r}
+scatterplotMatrix(~proba+rang+voeux | concours, reg.line=lm, smooth=TRUE, spread=FALSE, span=0.5, 
+  id.n=0, diagonal= 'density', by.groups=FALSE, data=ienac20)
+```
+
+```{r}
+scatterplotMatrix(~analyse+ecrit+moyenne+oral+proba+rang+voeux | bac, reg.line=lm, smooth=TRUE, 
+  spread=FALSE, span=0.5, id.n=0, diagonal= 'density', by.groups=FALSE, data=ienac20)
+```
+
+```{r}
+scatterplotMatrix(~analyse+ecrit+moyenne+oral+proba+rang+voeux | concours, reg.line=lm, smooth=TRUE, 
+  spread=FALSE, span=0.5, id.n=0, diagonal= 'density', by.groups=FALSE, data=ienac20)
+```
+
+```{r}
+scatterplotMatrix(~analyse+ecrit+moyenne+oral+proba+rang+voeux | concours, reg.line=lm, smooth=TRUE, 
+  spread=FALSE, span=0.5, id.n=0, diagonal= 'density', by.groups=FALSE, data=ienac20)
+```
+
+```{r}
+scatterplotMatrix(~analyse+ecrit+moyenne+oral+proba+rang+voeux | filiere, reg.line=lm, smooth=TRUE, 
+  spread=FALSE, span=0.5, id.n=0, diagonal= 'density', by.groups=FALSE, data=ienac20)
+```
+
+```{r}
+scatterplotMatrix(~analyse+ecrit+moyenne+oral+proba+rang+voeux | mention, reg.line=lm, smooth=TRUE, 
+  spread=FALSE, span=0.5, id.n=0, diagonal= 'density', by.groups=FALSE, data=ienac20)
+```
+
+```{r}
+scatterplotMatrix(~analyse+ecrit+moyenne+oral+proba+rang+voeux | sexe, reg.line=lm, smooth=TRUE, 
+  spread=FALSE, span=0.5, id.n=0, diagonal= 'density', by.groups=FALSE, data=ienac20)
+```
+
+```{r}
+scatterplotMatrix(~analyse+ecrit+moyenne+oral+proba+rang+voeux | succes, reg.line=lm, smooth=TRUE, 
+  spread=FALSE, span=0.5, id.n=0, diagonal= 'density', by.groups=FALSE, data=ienac20)
+```
